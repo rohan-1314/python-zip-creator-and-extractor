@@ -11,10 +11,9 @@ extract_but = sg.Button("extract", size=10)
 exit_but = sg.Button('exit', size=10,key='exit')
 output_txt = sg.Text(key='output', text_color='red')
 sg.theme('LightBlue5')
-col1 = sg.Column([[label1], [label2]])
-col2 = sg.Column([[input1], [input2]])
-col3 = sg.Column([[choose_but1], [choose_but2]])
-window = sg.Window("ZIP file Extractor", layout=[[col1, col2, col3],
+
+window = sg.Window("ZIP file Extractor", layout=[[label1,input1,choose_but1],
+                                                 [label2,input2,choose_but2],
                                                  [extract_but, output_txt], [exit_but]],
                    font=('Helvetica', 12))
 while True:
